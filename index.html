@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click me</title>
+</head>
+<body>
+    <h1>Click me for a Surprise!!!</h1>
+    <button id="rolled">Click Me</button>
+    <video id="myVideo" src="video/rickrolled.mp4" type="video/mp4" ></video>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+    
+        h1 {
+            color: #333;
+        }
+    
+        #rolled {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    
+        #rolled:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+    <script>
+        const rolled = document.getElementById('rolled');
+        const myVideo = document.getElementById('myVideo');
+        rolled.addEventListener("click", () => {
+            myVideo.setAttribute('controls','');
+           myVideo.play();
+        });
+    </script>
+</body>
+</html>
